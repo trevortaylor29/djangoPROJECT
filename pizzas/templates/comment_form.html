@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Pizzeria - Leave a Comment</title>
+    </head>
+    <body>
+        <h1>Leave a Comment</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>
+                <label for="commenter_name">Name:</label>
+                <input type="text" name="commenter_name" id="commenter_name" value="{{ comment.commenter_name }}">
+            </p>
+            <p>
+                <label for="comment_text">Comment:</label>
+                <textarea name="comment_text" id="comment_text">{{ comment.comment_text }}</textarea>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+                <button onclick="window.history.back()">Back</button>
+            </p>
+        </form>
+    </body>
+</html>

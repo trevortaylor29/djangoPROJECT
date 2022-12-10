@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Pizzeria - Pizzas</title>
+    </head>
+    <body>
+        <h1>Pizzas</h1>
+        <ul>
+            {% for pizza in pizzas %}
+                <li><a href="{% url 'pizza' pizza.id %}">{{ pizza.pizza_name }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>
+            <button onclick="window.history.back()">Back</button>
+        </p>
+    </body>
+</html>

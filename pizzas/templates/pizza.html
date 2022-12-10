@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Pizzeria - {{ pizza.pizza_name }}</title>
+    </head>
+    <body>
+        {% if pizza.get_image_url %}
+        <img src="{{ pizza.get_image_url }}" alt="{{ pizza.pizza_name }}" />
+    {% endif %}
+        <p>Toppings:</p>
+        <ul>
+            {% for topping in toppings %}
+                <li>{{ topping.topping_name }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Comments</h2>
+        <ul>
+            {% for comment in comments %}
+                <li>{{ comment.comment_text|linebreaks }}</li>
+            {% endfor %}
+        <p>
+            <a href="{% url 'comment_form' pizza.id %}">Leave a comment</a>
+            <button onclick="window.history.back()">Back</button>
+        </p>
+        
+        
+    </body>
+</html>
