@@ -2,7 +2,18 @@
     <head>
         <title>Pizzeria - {{ pizza.pizza_name }}</title>
     </head>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          font-size: large;
+          background-image: url('https://img.freepik.com/free-vector/pizza-doodle-patterned-background_53876-97421.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+      </style>
     <body>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);background-color: rgb(255, 233, 200);">
         {% if pizza.get_image_url %}
         <img src="{{ pizza.get_image_url }}" alt="{{ pizza.pizza_name }}" />
     {% endif %}

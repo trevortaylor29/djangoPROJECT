@@ -2,7 +2,19 @@
     <head>
         <title>Pizzeria - Pizzas</title>
     </head>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          font-size: large;
+          background-image: url('https://img.freepik.com/free-vector/pizza-doodle-patterned-background_53876-97421.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+      </style>
     <body>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);background-color: rgb(255, 233, 200);">
+
         <h1>Pizzas</h1>
         <ul>
             {% for pizza in pizzas %}
